@@ -22,16 +22,16 @@
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 // Решение через массивы и преобразование строки
 
-// void Find_3_Number(int number) // объявляем метод
-// {
-//     string number_text = Convert.ToString(number); // идем на stackoverflow и подсматриваем как int превратить в string
-//     if(number_text.Length > 2) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number_text[2]}\""); // если знаков больше 2 в числе печатаем ответ
-//     else Console.WriteLine($"Число \"{number}\" не имеет третьей цифры"); // если знаков меньше двух, печатаем другой ответ
-// }
-// Console.Write("Введите число: "); // запрашиваем число
-// int num_1 = Convert.ToInt32(Console.ReadLine()); // получаем от пользователя число
+void Find_3_Number(int number) // объявляем метод
+{
+    string number_text = Convert.ToString(number); // идем на stackoverflow и подсматриваем как int превратить в string
+    if(number_text.Length > 2) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number_text[2]}\""); // если знаков больше 2 в числе печатаем ответ
+    else Console.WriteLine($"Число \"{number}\" не имеет третьей цифры"); // если знаков меньше двух, печатаем другой ответ
+}
+Console.Write("Введите число: "); // запрашиваем число
+int num_1 = Convert.ToInt32(Console.ReadLine()); // получаем от пользователя число
 
-// Find_3_Number(num_1); // запускаем метод
+Find_3_Number(num_1); // запускаем метод
 
 // Решение без преобразования строки
 // void Find_3_Number(long number) // объявляем метод, дальше не собираюсь комментировать это безумие :)
