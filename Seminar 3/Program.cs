@@ -31,7 +31,7 @@
 // number(num_1);
 
 // Задача 4. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
-void programm(int xA, int xB, int yA, int yB)
-{
-    int result_1 = xA  
-}
+// void programm(int xA, int xB, int yA, int yB)
+// {
+//     int result_1 = xA  
+// }
