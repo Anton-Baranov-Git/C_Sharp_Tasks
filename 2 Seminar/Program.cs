@@ -44,31 +44,31 @@
 
 // // Решение без преобразования строки
 
-// void Find_3_Number(long number) // объявляем метод, дальше не собираюсь комментировать это безумие :)
-// {
-//     if(number > 2147483647 ^ number < -2147483648)Console.WriteLine($"Введенное число \"{number}\" должно быть в пределах от \"-2147483648\" до \"2147483647\"");
-//     if(number >= 999999999 & number < 2147483647) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000000 % 10}\"");
-//     if(number >= 99999999 & number < 999999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000000 % 10}\"");
-//     if(number >= 9999999 & number < 99999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100000 % 10}\"");
-//     if(number >= 999999 & number < 9999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000 % 10}\"");
-//     if(number >= 99999 & number < 999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000 % 10}\"");
-//     if(number >= 9999 & number < 99999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100 % 10}\"");
-//     if(number >= 999 & number < 9999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10 % 10}\"");
-//     if(number >= 100 & number < 999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number % 10}\"");
-//     if(number < 100 ^ number < -100) Console.WriteLine($"Число \"{number}\" не имеет третьей цифры");
-//     if(number <= -100 & number > -999) Console.WriteLine($"Третья Цифра числа \"{number}\" является \"{number % 10 * (-1)}\"");
-//     if(number <= -999 & number > -9999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10 % 10 * (-1)}\"");
-//     if(number <= -9999 & number > -99999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100 % 10 * (-1)}\"");
-//     if(number <= -99999 & number > -999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000 % 10 * (-1)}\"");
-//     if(number <= -999999 & number > -9999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000 % 10 * (-1)}\"");
-//     if(number <= -9999999 & number > -99999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100000 % 10 * (-1)}\"");
-//     if(number <= -99999999 & number > -999999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000000 % 10 * (-1)}\"");
-//     if(number <= -999999999 & number < -2147483648) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000000 % 10}\"");
-// }
-// Console.Write("Введите число: "); // запрашиваем число
-// long num_1 = Convert.ToInt64(Console.ReadLine()); // получаем от пользователя число
+void Find_3_Number(long number) // объявляем метод, дальше не собираюсь комментировать это безумие :)
+{
+    if(number > 2147483647 ^ number < -2147483648)Console.WriteLine($"Введенное число \"{number}\" должно быть в пределах от \"-2147483648\" до \"2147483647\"");
+    if(number >= 999999999 & number < 2147483647) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000000 % 10}\"");
+    if(number >= 99999999 & number < 999999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000000 % 10}\"");
+    if(number >= 9999999 & number < 99999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100000 % 10}\"");
+    if(number >= 999999 & number < 9999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000 % 10}\"");
+    if(number >= 99999 & number < 999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000 % 10}\"");
+    if(number >= 9999 & number < 99999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100 % 10}\"");
+    if(number >= 999 & number < 9999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10 % 10}\"");
+    if(number >= 100 & number < 999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number % 10}\"");
+    if(number < 100 ^ number < -100) Console.WriteLine($"Число \"{number}\" не имеет третьей цифры");
+    if(number <= -100 & number > -999) Console.WriteLine($"Третья Цифра числа \"{number}\" является \"{number % 10 * (-1)}\"");
+    if(number <= -999 & number > -9999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10 % 10 * (-1)}\"");
+    if(number <= -9999 & number > -99999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100 % 10 * (-1)}\"");
+    if(number <= -99999 & number > -999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000 % 10 * (-1)}\"");
+    if(number <= -999999 & number > -9999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000 % 10 * (-1)}\"");
+    if(number <= -9999999 & number > -99999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 100000 % 10 * (-1)}\"");
+    if(number <= -99999999 & number > -999999999) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 1000000 % 10 * (-1)}\"");
+    if(number <= -999999999 & number < -2147483648) Console.WriteLine($"Третья цифра числа \"{number}\" является \"{number / 10000000 % 10}\"");
+}
+Console.Write("Введите число: "); // запрашиваем число
+long num_1 = Convert.ToInt64(Console.ReadLine()); // получаем от пользователя число
 
-// Find_3_Number(num_1); // запускаем метод
+Find_3_Number(num_1); // запускаем метод
 
 
 // // 3 способ без массива
