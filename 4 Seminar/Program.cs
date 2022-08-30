@@ -76,68 +76,37 @@
 
 //_____________________________________________________________________________________________________________________________
 
-// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-int [] InputMassive()
+int[] MassiveIputNumber() // объявляем метод
 {
-    int length_massive = 1;
-    int [] array = new int [length_massive];
-    
-    for(int i = 0; i < length_massive; i++)
+    Console.Write($"Сколько чисел будет в массиве: "); // запрашиваем количество чисел
+    int length = Convert.ToInt32(Console.ReadLine()); // записываем в переменную
+    int[] newarray = new int[length]; // создаем массив
+    int index = 1; // создаем переменную для запроса чисел
+    Console.WriteLine($"Вам нужно ввести {length} числа (чисел)"); // сообщение о запросе чисел;
+
+    for(int i = 0; i < length; i++) // объявляем цикл
     {
-        Console.Write("Введите число: "); // запрашиваем число
-        int current = Convert.ToInt32(Console.ReadLine());
-        array[i] = current; // записываем число в переменную
-        Console.WriteLine($"Добавлено число {array[i]}"); // выводим результат
+        Console.Write($"Введите число {index}:  "); // какое число вводим сейчас
+        newarray[i] = Convert.ToInt32(Console.ReadLine()); // записываем число в массив
+        index++; // двигаем счетчик
     }
-    Console.WriteLine($"Добавлено число вот {array[]}"); // выводим результат    
-    return array;
+    return newarray; // возвращаем массив
 }
 
+void ShowArray(int[] array) // объявляем метод
+{
+    Console.Write($"Получился массив из {array.Length} чисел(числа):  "); // выводим сообщение
+    for(int i = 0; i < array.Length; i++) // цикл перебора
+    {
+        if(i == array.Length - 1) Console.Write(array[i]); // последняя строка без запятой
+        else Console.Write(array[i] + ", "); // объявляем цикл
+    }
+    Console.WriteLine(); // пустая строка
+}
 
-Console.WriteLine($"Сумма цифр в числе равна: {InputMassive()}"); // выводим результат
+ShowArray(MassiveIputNumber()); // запускаем методы
 
+_____________________________________________________________________________________________________________________________
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// int FindSum(int num)
-// {
-//     int sum = 0;
-
-//     for(int i = 1; i > sum; i++)
-//     {
-//         i += 1;
-//     }
-//     return sum;
-// }
-// Console.Write("Введите число: "); // запрашиваем число
-// int a = Convert.ToInt32(Console.ReadLine()); // получаем от пользователя число
-// FindSum(a);
-// Console.WriteLine($"{a},{a})");
-
-
-// int CreateRandomArray(int size, int minValue, int maxValue)
-// {
-//     int[] newArray = new int[size];
-//     for(int i = 0; i < size; i++)
-//     {
-//         newArray[i] = new Random().Next(minValue, maxValue + 1);
-//     }
-//     return newArray;
-// }
-
-// int [] a = CreateRandomArray(5,1,19);
-// Console.WriteLine($"{a},{a})");
