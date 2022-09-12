@@ -184,6 +184,7 @@ ShowArray(AverageColumns(newArray));
 
 
 
+
 // Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 
 // int[,] RandomArray2d()
@@ -408,4 +409,12 @@ ShowArray(AverageColumns(newArray));
 // int a = DiagonalSumArray(newArray);
 
 // Console.WriteLine($"Сумма элементов на диагонали равна: {a}");
+
+
+
+
+
+
+//444444
+//555555
 
