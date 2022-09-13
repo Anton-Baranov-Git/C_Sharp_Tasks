@@ -1,8 +1,80 @@
 ﻿//________________________________________________________________________________________________________________________
 
-// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию
+// элементы каждой строки двумерного массива.
 
-int[,] RandomArray2d()
+// int[,] RandomArray2d() // данный метод создает 2D массив
+// {
+//     Console.Write("Размер массива m: "); // спрашиваем длину массива
+//     int rows = Convert.ToInt32(Console.ReadLine()); // записываем в переменную длину массива
+
+//     Console.Write("Размер массива n: "); // спрашиваем длину массива
+//     int columns = Convert.ToInt32(Console.ReadLine()); // записываем в переменную длину массива
+
+//     Console.Write("Минимальное значение массива: "); // с чего начианется массив
+//     int minValue = Convert.ToInt32(Console.ReadLine()); // записываем в переменную
+
+//     Console.Write("Максимальное значение массива: "); // чем заканчивается массив
+//     int maxValue = Convert.ToInt32(Console.ReadLine()); // записываем в переменную
+
+//     int[,] newArray = new int[rows, columns];
+
+//     for(int i = 0; i < rows; i++)
+//     {
+//         for(int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+//         }
+//     }
+//     return newArray;
+// }
+
+// void Show2Darray(int[,] array) // данный метод показывает 2D массив
+// {
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// void SortMassive(int[,] array) // данный метод сортирует 2D массив по строкам
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//         for (int k = 0; k < array.GetLength(1); k++)
+//         {
+//             {
+//                 for (int j = 0; j < array.GetLength(0) - 1; j++)
+//                 {
+//                     if (array[i,j] < array[i,j + 1])
+//                         {
+//                             int temp = array[i,j];
+//                             array[i,j] = array[i,j + 1];
+//                             array[i,j + 1] = temp;
+//                         }
+//                 }
+            
+//             }
+//         }
+//     Console.WriteLine();
+// }
+
+// int[,] newArray = RandomArray2d(); // применяем метод 2D массива
+// Show2Darray(newArray); // показываем новый массив
+// SortMassive(newArray); // сортируем массив
+// Show2Darray(newArray); // показываем отсортированный массив
+
+//________________________________________________________________________________________________________________________
+
+// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая
+// будет находить строку с наименьшей суммой элементов.
+
+int[,] RandomArray2d() // данный метод создает 2D массив
 {
     Console.Write("Размер массива m: "); // спрашиваем длину массива
     int rows = Convert.ToInt32(Console.ReadLine()); // записываем в переменную длину массива
@@ -28,60 +100,52 @@ int[,] RandomArray2d()
     return newArray;
 }
 
-void Show2Darray(int[,] array)
+void Show2Darray(int[,] array) // данный метод показывает 2D массив
 {
-
+    Console.WriteLine();
     for (int i = 0; i < array.GetLength(0); i++)
-    {
+    {   
+        int sum = 0;
+        Console.Write($"{i} строка: ");
         for (int j = 0; j < array.GetLength(1); j++)
         {
+            
             Console.Write(array[i, j] + " ");
+            sum = array[i, j] + sum;
         }
+        Console.Write($" Сумма данной строки: {sum}");
         Console.WriteLine();
     }
     Console.WriteLine();
 }
 
-
-
-
-
-void SortMassive(int[,] array)
+void MinimalSumRows(int[,] array) // данный метод складывает значения массива и показывает наименьшее
 {
-    for (int i = 0; i < array.GetLength(0) - 1; i++)
-        for (int j = 0; j < array.GetLength(1); j++)
+    int rows = 0;
+    int min = 0;
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        int sum = 0;
+        for(int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < i; k++)
-            {
-                if(array[i,j] > array[i + 1,j])
-                {
-                    int temp = array[i + 1,j];
-                    array[i + 1,j] = array[i,j];
-                    array[i,j] = temp;
-                }
-
-
-            }
+            sum = array[i,j] + sum;
         }
-    Console.WriteLine();
-
+    if(sum < min)
+    {
+        min = sum;
+        rows = i;
+    }
+    }
+    Console.WriteLine($"Номер строки с наименьшей суммой элементов: {rows}");
 }
 
-
-
-
-int[,] newArray = RandomArray2d();
-Show2Darray(newArray);
-SortMassive(newArray);
-Show2Darray(newArray);
+int[,] newArray = RandomArray2d(); // применяем метод 2D массива
+Show2Darray(newArray); // показываем новый массив
+MinimalSumRows(newArray);
 
 
 
 
-
-//________________________________________________________________________________________________________________________
-
-// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 
